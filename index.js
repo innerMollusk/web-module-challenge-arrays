@@ -88,8 +88,8 @@ Use the addFlavor function below to do the following:
 
 
 function addFlavor([], a){
-  originalFlavors.unshift(a);
-  return originalFlavors;
+  let newFlavor = originalFlavors.unshift(a);
+  return newFlavor;
  }
 addFlavor(originalFlavors, "Rainbow Sherbert");
 
@@ -107,8 +107,8 @@ Use the removeLastFlavor function below to do the following:
 
 
 function removeLastFlavor([]){
- originalFlavors.pop();
- return originalFlavors;
+ let removeFlavor = originalFlavors.pop();
+ return removeFlavor;
 }
 removeLastFlavor(originalFlavors);
 
