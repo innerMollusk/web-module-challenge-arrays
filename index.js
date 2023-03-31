@@ -64,13 +64,13 @@ For Example: is31Flavors(originalFlavors) will return true if your code is worki
 
 
 function is31Flavors([]){
-  if(newArray.length === 31) {
+  if(originalFlavors.length === 31) {
 return true;
   } else {
     return false;
   }
  }
- is31Flavors(newArray);
+ is31Flavors(originalFlavors);
 
 
 
