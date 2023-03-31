@@ -46,7 +46,7 @@ Use the copy function below to do the following:
 */
  
 function copy([]){
-  let newArray = [...originalFlavors];
+  let newArray = original.Flavors.slice([]);
   return newArray;
 }
 copy(originalFlavors);
