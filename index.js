@@ -45,9 +45,8 @@ Use the copy function below to do the following:
   2. Return a copy of the received array  
 */
  
-function copy([]){
-  let newArray = originalFlavors.slice([]);
-  return newArray;
+function copy(array){
+  return [...array];
 }
 copy(originalFlavors);
 
@@ -63,8 +62,8 @@ For Example: is31Flavors(originalFlavors) will return true if your code is worki
 */
 
 
-function is31Flavors([]){
-  if(originalFlavors.length === 31) {
+function is31Flavors(array){
+  if(array.length === 31) {
 return true;
   } else {
     return false;
@@ -87,9 +86,9 @@ Use the addFlavor function below to do the following:
 */
 
 
-function addFlavor([], a){
-  originalFlavors.unshift(a);
-  return originalFlavors;
+function addFlavor(array, string){
+  array.unshift(string);
+  return array;
  }
 addFlavor(originalFlavors, "Rainbow Sherbert");
 
@@ -106,9 +105,9 @@ Use the removeLastFlavor function below to do the following:
 */
 
 
-function removeLastFlavor([]){
-  originalFlavors.pop();
-  return originalFlavors;
+function removeLastFlavor(array){
+  array.pop();
+  return array;
  }
  removeLastFlavor(originalFlavors);
 
@@ -125,8 +124,8 @@ Use the getFlavorByIndex function below to do the following:
 */
 
 
-function getFlavorByIndex([], a){
-  let value = originalFlavors[a];
+function getFlavorByIndex(array, a){
+  let value = array[a];
   return value;
 }
 getFlavorByIndex(originalFlavors, 4);
@@ -146,10 +145,10 @@ Use the removeFlavorByName function below to do the following:
   HINT: You can use .splice() for this
 */
 
-function removeFlavorByName([], a){
-  let flavorIndex = originalFlavors.indexOf(a);
-  originalFlavors.splice(flavorIndex, 1);
-  return originalFlavors.length;
+function removeFlavorByName(array, a){
+  let flavorIndex = array.indexOf(a);
+  array.splice(flavorIndex, 1);
+  return array.length;
 }
 removeFlavorByName(originalFlavors, "Butterscotch Ribbon")
 
@@ -173,8 +172,8 @@ Use the filterByWord function below to do the following:
 */
 
 
-function filterByWord([], a){
-  let chocolate = originalFlavors.includes(a);
+function filterByWord(array, a){
+  let chocolate = array.includes(a);
   let chocolateArray = ["Chocolate", "Chocolate Almond", "Chocolate Chip", "Chocolate Fudge", "Chocolate Mint", "Chocolate Ribbon"]
   if(chocolate === true) {
     return chocolateArray;
@@ -195,10 +194,10 @@ Use the getAverageWordLength function below to do the following:
   For example: getAverageWordLength(originalFlavors) should return a number between 0 and 3.     
 */
 
-function getAverageWordLength([]){
+function getAverageWordLength(array){
   let map = {};
-  for (let i = 0; i < originalFlavors.length; i++) {
-  let item = originalFlavors[i];
+  for (let i = 0; i < array.length; i++) {
+  let item = array[i];
     const words = item.split(' ');
     const wordCount = words.length;
     map[words] = (map[words] + wordCount) || wordCount;
