@@ -46,8 +46,8 @@ Use the copy function below to do the following:
 */
  
 function copy([]){
-  let newArray = originalFlavors.slice([]);
-  return newArray;
+  let newArray = [...originalFlavors];
+  console.log(newArray);
 }
 copy(originalFlavors);
 
@@ -88,8 +88,8 @@ Use the addFlavor function below to do the following:
 
 
 function addFlavor([], a){
-  let newFlavor = originalFlavors.unshift(a);
-  return newFlavor;
+  originalFlavors.unshift(a);
+  return originalFlavors;
  }
 addFlavor(originalFlavors, "Rainbow Sherbert");
 
@@ -107,10 +107,10 @@ Use the removeLastFlavor function below to do the following:
 
 
 function removeLastFlavor([]){
- let removeFlavor = originalFlavors.pop();
- return removeFlavor;
-}
-removeLastFlavor(originalFlavors);
+  originalFlavors.pop();
+  return originalFlavors;
+ }
+ removeLastFlavor(originalFlavors);
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
