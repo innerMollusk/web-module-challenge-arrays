@@ -172,13 +172,15 @@ Use the filterByWord function below to do the following:
 */
 
 
-function filterByWord(array, a){
-  let chocolate = array.includes(a);
-  let chocolateArray = ["Chocolate", "Chocolate Almond", "Chocolate Chip", "Chocolate Fudge", "Chocolate Mint", "Chocolate Ribbon"]
-  if(chocolate === true) {
-    return chocolateArray;
+function filterByWord(array, flavor){
+  let filteredArray = [];
+  for(let i = 0; i < array.length; i++) {
+  if(array[i].includes(flavor)) {
+  filteredArray.push(array[i]);
   }
-}
+  }
+  return filteredArray;
+  }
 filterByWord(originalFlavors, "Chocolate");
 
 
