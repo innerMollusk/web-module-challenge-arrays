@@ -145,10 +145,13 @@ Use the removeFlavorByName function below to do the following:
   HINT: You can use .splice() for this
 */
 
-function removeFlavorByName(array, a){
-  let flavorIndex = array.indexOf(a);
-  array.splice(flavorIndex, 1);
-  return array.length;
+function removeFlavorByName(array, flavor){
+  for(let i = 0; i < array.length; i++) {
+     if(array[i] === flavor) {
+      array.splice(i, 1);
+     }
+  }
+  return array;
 }
 removeFlavorByName(originalFlavors, "Butterscotch Ribbon")
 
