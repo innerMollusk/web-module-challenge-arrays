@@ -65,9 +65,9 @@ For Example: is31Flavors(originalFlavors) will return true if your code is worki
 
 function is31Flavors([]){
   if(originalFlavors.length === 31) {
-console.log(true);
+return true;
   } else {
-    console.log(false);
+    return false;
   }
  }
  is31Flavors(originalFlavors);
