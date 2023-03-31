@@ -47,7 +47,7 @@ Use the copy function below to do the following:
  
 function copy([]){
   let newArray = [...originalFlavors];
-  console.log(newArray);
+  return newArray;
 }
 copy(originalFlavors);
 
