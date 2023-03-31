@@ -46,7 +46,7 @@ Use the copy function below to do the following:
 */
  
 function copy([]){
-  let newArray = original.Flavors.slice([]);
+  let newArray = originalFlavors.slice([]);
   return newArray;
 }
 copy(originalFlavors);
@@ -125,10 +125,11 @@ Use the getFlavorByIndex function below to do the following:
 */
 
 
-function getFlavorByIndex(/*your code here*/){
-  /*your code here*/
+function getFlavorByIndex([], a){
+  let value = originalFlavors[a];
+  return value;
 }
-
+getFlavorByIndex(originalFlavors, 4);
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -145,10 +146,12 @@ Use the removeFlavorByName function below to do the following:
   HINT: You can use .splice() for this
 */
 
-function removeFlavorByName(/*your code here*/){
-  /*your code here*/
+function removeFlavorByName([], a){
+  let flavorIndex = originalFlavors.indexOf(a);
+  originalFlavors.splice(flavorIndex, 1);
+  return originalFlavors.length;
 }
-
+removeFlavorByName(originalFlavors, "Butterscotch Ribbon")
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -170,10 +173,14 @@ Use the filterByWord function below to do the following:
 */
 
 
-function filterByWord(/*your code here*/){
-  /*your code here*/
+function filterByWord([], a){
+  let chocolate = originalFlavors.includes(a);
+  let chocolateArray = ["Chocolate", "Chocolate Almond", "Chocolate Chip", "Chocolate Fudge", "Chocolate Mint", "Chocolate Ribbon"]
+  if(chocolate === true) {
+    return chocolateArray;
+  }
 }
-
+filterByWord(originalFlavors, "Chocolate");
 
 
 /* 💪💪💪💪💪🧁🍦🍨 STRETCH 🍨🍦🍫💪💪💪💪💪*/ 
